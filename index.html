@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #root {
+        width: 800px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 1rem;
+    }
+
+    #root * {
+        margin-bottom: 0 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    a{
+        font-size: 1.2rem;
+        color: rgb(79, 201, 239);
+    }
+</style>
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+
+    <script type="text/babel">
+        // Define a component called Greetings
+        // function Greetings() {
+        //   return <h1>Hello readers, Thankyou for reading this blog !</h1>;
+        // }
+        const heading = 'Topics Coverd';
+
+        const text1 = `The Following is a list of all topics we cover in the MDN Learning area`;
+
+
+        const text3 = `If you are a complete beginner, web development can be challenging — we will hold
+                        your hand and provide enough detail for you to feel comfortable and learn the topics
+                        properly. You should feel at home whether you are a student learning web
+                        development (on your own or as part of a class), a teacher looking for class
+                        materials, a hobbyist, or someone who just wants to understand more about how
+                        web technologies work.`
+
+
+        const element = [
+            React.createElement('h1', null, heading),
+            
+            React.createElement('p', null, text1),
+            
+           React.createElement('div', null, 
+                           React.createElement('a', {href : "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web"}, 'Getting Started With Web')),
+
+                           React.createElement('p', null, 'Provides a practical introduction to web development for complete beginners. HTML — Structuring the web'),
+
+                           React.createElement('a', {href : "https://developer.mozilla.org/en-US/docs/Learn/HTML"}, 'HTML — Structuring the web'),
+
+                           React.createElement('p', null, 'HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.'),
+
+                           React.createElement('a', {href : "https://developer.mozilla.org/en-US/docs/Learn/CSS"}, 'CSS - Styling the web'),
+
+                           React.createElement('p', null, 'CSS is the language that we use to control our web contents style and layout, as well as adding behavior like animation. This topic provides comprehensivecoverage of CSS.'),
+
+
+                           
+
+            
+
+        ]
+
+        // Render the component to the DOM
+        ReactDOM.render(element,
+            document.getElementById("root")
+        );
+    </script>
+
+</body>
+
+</html>
